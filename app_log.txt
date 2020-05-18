@@ -1,0 +1,1201 @@
+File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 17:33] 162.158.198.158 GET https /page/LB/Education? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3540, in _ensure_valid_index
+    value = Series(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/series.py", line 316, in __init__
+    data = SingleBlockManager(data, index, fastpath=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 1516, in __init__
+    block = make_block(block, placement=slice(0, len(axis)), ndim=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 3284, in make_block
+    return klass(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 2792, in __init__
+    super().__init__(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 128, in __init__
+    "{mgr}".format(val=len(self.values), mgr=len(self.mgr_locs))
+ValueError: Wrong number of items passed 3, placement implies 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./ds_app/cid_route.py", line 166, in get_json_s
+    result_blog = LB().top_ten_blogs(category)
+  File "./utils/cid_utils/leaderboard_data.py", line 155, in top_ten_blogs
+    df_blog = LB().data_hyperlink(df)
+  File "./utils/cid_utils/leaderboard_data.py", line 95, in data_hyperlink
+    df_link['Name'] = df_link.apply(lambda row: LB().hyperlink(row), axis=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3487, in __setitem__
+    self._set_item(key, value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3563, in _set_item
+    self._ensure_valid_index(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3543, in _ensure_valid_index
+    "Cannot set a frame with no defined index "
+ValueError: Cannot set a frame with no defined index and a value that cannot be converted to a Series
+
+[2020-May-15 17:33] 47.100.13.168 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 17:45] 13.233.98.200 POST http /object_detection? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/ds_app/video_route.py", line 134, in classifiy_trell_video
+    result = do.process_and_detect_objects(frame_folder)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/detect_objects.py", line 8, in process_and_detect_objects
+    detect_objects = start_object_detection(frames)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/detect.py", line 199, in start_object_detection
+    return  detect(opt)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/detect.py", line 60, in detect
+    dataset = LoadImages(source, img_size=img_size, half=half)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/utils/datasets.py", line 67, in __init__
+    assert self.nF > 0, 'No images or videos found in ' + path
+AssertionError: No images or videos found in data/samples
+
+[2020-May-15 17:55] 172.68.146.138 GET https /page/LB/Education? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3540, in _ensure_valid_index
+    value = Series(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/series.py", line 316, in __init__
+    data = SingleBlockManager(data, index, fastpath=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 1516, in __init__
+    block = make_block(block, placement=slice(0, len(axis)), ndim=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 3284, in make_block
+    return klass(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 2792, in __init__
+    super().__init__(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 128, in __init__
+    "{mgr}".format(val=len(self.values), mgr=len(self.mgr_locs))
+ValueError: Wrong number of items passed 3, placement implies 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./ds_app/cid_route.py", line 166, in get_json_s
+    result_blog = LB().top_ten_blogs(category)
+  File "./utils/cid_utils/leaderboard_data.py", line 155, in top_ten_blogs
+    df_blog = LB().data_hyperlink(df)
+  File "./utils/cid_utils/leaderboard_data.py", line 95, in data_hyperlink
+    df_link['Name'] = df_link.apply(lambda row: LB().hyperlink(row), axis=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3487, in __setitem__
+    self._set_item(key, value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3563, in _set_item
+    self._ensure_valid_index(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3543, in _ensure_valid_index
+    "Cannot set a frame with no defined index "
+ValueError: Cannot set a frame with no defined index and a value that cannot be converted to a Series
+
+[2020-May-15 18:23] 44.225.84.206 GET https /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:23] 44.225.84.206 GET https /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:23] 44.225.84.206 GET https /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:23] 44.225.84.206 GET https /latest/dynamic/instance-identity/document? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:23] 44.225.84.206 GET https /latest/dynamic/instance-identity/document? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:28] 195.54.160.121 POST http /api/jsonws/invoke? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+ubuntu@ip-172-30-1-153:~/trell_projects/trell-ds-framework$ 
+ubuntu@ip-172-30-1-153:~/trell_projects/trell-ds-framework$ tail -1000 app.log 
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 10:03] 195.54.160.121 GET http /?XDEBUG_SESSION_START=phpstorm 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 10:11] 195.54.160.121 GET http /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 10:18] 128.14.134.170 GET https /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 10:35] 198.20.103.178 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 10:54] 45.143.220.133 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:12] 162.158.165.64 GET https /page/SU/subhachugh? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:13] 162.158.165.64 GET https /page/SU/subhachugh? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:13] 162.158.165.64 GET https /page/SU/subhachugh? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:13] 162.158.165.64 GET https /page/SU/subhachugh? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:14] 162.158.165.64 GET https /page/SU/subhachugh? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:15] 162.158.165.64 GET https /page/SU/subhachugh? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:15] 162.158.165.64 GET https /page/SU/subhachugh? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:22] 95.105.13.128 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:25] 118.232.98.2 POST http /doLogin? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:25] 118.232.98.2 POST http /doLogin? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:25] 118.232.98.2 GET http /operator/basic.shtml?id=1337 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:25] 118.232.98.2 POST http /doLogin? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:26] 118.232.98.2 GET http /operator/basic.shtml?id=1337 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:27] 128.14.134.170 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:35] 195.54.160.121 POST http /api/jsonws/invoke? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 11:46] 185.107.80.65 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 12:41] 83.97.20.25 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 12:46] 45.13.93.90 CONNECT http /ip.ws.126.net:443? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 13:32] 196.52.43.125 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 13:38] 195.54.160.121 GET https /?XDEBUG_SESSION_START=phpstorm 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 13:38] 195.54.160.121 POST https /api/jsonws/invoke? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 13:38] 195.54.160.121 GET https /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 13:45] 106.75.26.68 GET https /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 14:05] 13.233.98.200 POST http /object_detection? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/ds_app/video_route.py", line 134, in classifiy_trell_video
+    result = do.process_and_detect_objects(frame_folder)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/detect_objects.py", line 8, in process_and_detect_objects
+    detect_objects = start_object_detection(frames)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/detect.py", line 199, in start_object_detection
+    return  detect(opt)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/detect.py", line 60, in detect
+    dataset = LoadImages(source, img_size=img_size, half=half)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/utils/datasets.py", line 67, in __init__
+    assert self.nF > 0, 'No images or videos found in ' + path
+AssertionError: No images or videos found in data/samples
+
+[2020-May-15 14:08] 195.54.160.121 GET https /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 14:08] 195.54.160.121 POST https /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 14:13] 137.59.16.177 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 14:34] 45.227.255.224 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 15:15] 162.158.198.136 GET https /page/LB/Education? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3540, in _ensure_valid_index
+    value = Series(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/series.py", line 316, in __init__
+    data = SingleBlockManager(data, index, fastpath=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 1516, in __init__
+    block = make_block(block, placement=slice(0, len(axis)), ndim=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 3284, in make_block
+    return klass(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 2792, in __init__
+    super().__init__(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 128, in __init__
+    "{mgr}".format(val=len(self.values), mgr=len(self.mgr_locs))
+ValueError: Wrong number of items passed 3, placement implies 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./ds_app/cid_route.py", line 166, in get_json_s
+    result_blog = LB().top_ten_blogs(category)
+  File "./utils/cid_utils/leaderboard_data.py", line 155, in top_ten_blogs
+    df_blog = LB().data_hyperlink(df)
+  File "./utils/cid_utils/leaderboard_data.py", line 95, in data_hyperlink
+    df_link['Name'] = df_link.apply(lambda row: LB().hyperlink(row), axis=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3487, in __setitem__
+    self._set_item(key, value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3563, in _set_item
+    self._ensure_valid_index(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3543, in _ensure_valid_index
+    "Cannot set a frame with no defined index "
+ValueError: Cannot set a frame with no defined index and a value that cannot be converted to a Series
+
+[2020-May-15 15:33] 168.232.14.6 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 15:58] 159.65.121.162 GET http /stager32? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 15:58] 159.65.121.162 GET http /stager64? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /TP/public/index.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /TP/index.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /thinkphp/html/public/index.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /html/public/index.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /public/index.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /TP/html/public/index.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /elrekt.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /index.php? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:05] 118.89.64.48 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:07] 106.207.61.139 GET https /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:08] 162.243.139.242 GET http /portal/redlion? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:17] 106.207.61.139 GET https /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:43] 106.54.30.125 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 16:46] 13.233.98.200 POST http /object_detection? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/ds_app/video_route.py", line 134, in classifiy_trell_video
+    result = do.process_and_detect_objects(frame_folder)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/detect_objects.py", line 8, in process_and_detect_objects
+    detect_objects = start_object_detection(frames)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/detect.py", line 199, in start_object_detection
+    return  detect(opt)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/detect.py", line 60, in detect
+    dataset = LoadImages(source, img_size=img_size, half=half)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/utils/datasets.py", line 67, in __init__
+    assert self.nF > 0, 'No images or videos found in ' + path
+AssertionError: No images or videos found in data/samples
+
+[2020-May-15 17:09] 195.54.160.121 GET http /solr/admin/info/system?wt=json 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 17:14] 195.54.160.121 GET http /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 17:14] 195.54.160.121 GET http /?XDEBUG_SESSION_START=phpstorm 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 17:18] 195.54.160.121 GET http /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 17:33] 162.158.198.158 GET https /page/LB/Education? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3540, in _ensure_valid_index
+    value = Series(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/series.py", line 316, in __init__
+    data = SingleBlockManager(data, index, fastpath=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 1516, in __init__
+    block = make_block(block, placement=slice(0, len(axis)), ndim=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 3284, in make_block
+    return klass(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 2792, in __init__
+    super().__init__(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 128, in __init__
+    "{mgr}".format(val=len(self.values), mgr=len(self.mgr_locs))
+ValueError: Wrong number of items passed 3, placement implies 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./ds_app/cid_route.py", line 166, in get_json_s
+    result_blog = LB().top_ten_blogs(category)
+  File "./utils/cid_utils/leaderboard_data.py", line 155, in top_ten_blogs
+    df_blog = LB().data_hyperlink(df)
+  File "./utils/cid_utils/leaderboard_data.py", line 95, in data_hyperlink
+    df_link['Name'] = df_link.apply(lambda row: LB().hyperlink(row), axis=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3487, in __setitem__
+    self._set_item(key, value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3563, in _set_item
+    self._ensure_valid_index(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3543, in _ensure_valid_index
+    "Cannot set a frame with no defined index "
+ValueError: Cannot set a frame with no defined index and a value that cannot be converted to a Series
+
+[2020-May-15 17:33] 47.100.13.168 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 17:45] 13.233.98.200 POST http /object_detection? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/ds_app/video_route.py", line 134, in classifiy_trell_video
+    result = do.process_and_detect_objects(frame_folder)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/detect_objects.py", line 8, in process_and_detect_objects
+    detect_objects = start_object_detection(frames)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/detect.py", line 199, in start_object_detection
+    return  detect(opt)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/detect.py", line 60, in detect
+    dataset = LoadImages(source, img_size=img_size, half=half)
+  File "/home/ubuntu/trell_projects/trell-ds-framework/data_sciences/object_detection/yolov3/utils/datasets.py", line 67, in __init__
+    assert self.nF > 0, 'No images or videos found in ' + path
+AssertionError: No images or videos found in data/samples
+
+[2020-May-15 17:55] 172.68.146.138 GET https /page/LB/Education? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3540, in _ensure_valid_index
+    value = Series(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/series.py", line 316, in __init__
+    data = SingleBlockManager(data, index, fastpath=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 1516, in __init__
+    block = make_block(block, placement=slice(0, len(axis)), ndim=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 3284, in make_block
+    return klass(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 2792, in __init__
+    super().__init__(values, ndim=ndim, placement=placement)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 128, in __init__
+    "{mgr}".format(val=len(self.values), mgr=len(self.mgr_locs))
+ValueError: Wrong number of items passed 3, placement implies 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./ds_app/cid_route.py", line 166, in get_json_s
+    result_blog = LB().top_ten_blogs(category)
+  File "./utils/cid_utils/leaderboard_data.py", line 155, in top_ten_blogs
+    df_blog = LB().data_hyperlink(df)
+  File "./utils/cid_utils/leaderboard_data.py", line 95, in data_hyperlink
+    df_link['Name'] = df_link.apply(lambda row: LB().hyperlink(row), axis=1)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3487, in __setitem__
+    self._set_item(key, value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3563, in _set_item
+    self._ensure_valid_index(value)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/pandas/core/frame.py", line 3543, in _ensure_valid_index
+    "Cannot set a frame with no defined index "
+ValueError: Cannot set a frame with no defined index and a value that cannot be converted to a Series
+
+[2020-May-15 18:23] 44.225.84.206 GET https /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:23] 44.225.84.206 GET https /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:23] 44.225.84.206 GET https /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:23] 44.225.84.206 GET https /latest/dynamic/instance-identity/document? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:23] 44.225.84.206 GET https /latest/dynamic/instance-identity/document? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2020-May-15 18:28] 195.54.160.121 POST http /api/jsonws/invoke? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/ubuntu/trell_projects/venv_nsfw/lib/python3.6/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
